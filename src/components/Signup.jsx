@@ -1,6 +1,6 @@
-// import { createUserWithEmailAndPassword } from 'firebase/auth';
+
 import React,{useState} from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../contextApi/AuthContext';
 
 
@@ -11,6 +11,8 @@ const Signup = () => {
     const [password, setPassword] = useState(null);
     const [error, setError] = useState(null);
     const {createUser} = UserAuth()
+
+    const navigate = useNavigate()
 
     // constonSubmit = async (e) => {
     //     e.preventDefault();
@@ -38,6 +40,7 @@ const Signup = () => {
         try {
             await createUser(userid, email, password,error);
             console.log('here');
+            navigate('/confirmation')
         } catch(error) {
             setError(error.message);
             console.log(error.message);
@@ -88,26 +91,3 @@ export default Signup
 
 
 
-
-
-//     <Form>
-//     <FormGroup className="mb-3" controlId="formBasicEmail">
-//       <FormLabel>Email address</FormLabel>
-//       <FormControl type="email" placeholder="Enter email" />
-//       <FormText className="text-muted">
-//         We'll never share your email with anyone else.
-//       </FormText>
-//     </FormGroup>
-  
-//     <FormGroup className="mb-3" controlId="formBasicPassword">
-//       <FormLabel>Password</FormLabel>
-//       <FormControl type="password" placeholder="Password" />
-//     </FormGroup>
-//     <FormGroup className="mb-3" controlId="formBasicCheckbox">
-//       <FormCheck type="checkbox" label="Check me out" />
-//     </FormGroup>
-//     <Button variant="primary" type="submit">
-//       Submit
-//     </Button>
-//   </Form>
-  
