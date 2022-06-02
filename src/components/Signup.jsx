@@ -59,7 +59,7 @@ const Signup = () => {
     <button type="submit" className="btn btn-primary">Submit</button>
     
     </form>
-    Already Have an account then <Link to="/signin">Sign In</Link>
+    
     
   </>
   )
