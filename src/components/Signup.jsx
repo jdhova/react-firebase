@@ -14,28 +14,11 @@ const Signup = () => {
 
     const navigate = useNavigate()
 
-    // constonSubmit = async (e) => {
-    //     e.preventDefault();
-    //     const body = {userid, email, password};
-    //     const response = await fetch('http://localhost:5000/signup', {
-    //         method: 'POST',
-    //         headers: {'Content-Type': 'application/json'},
-    //         body: JSON.stringify(body)
-    //     });
-    //     const jsonData = await response.json();
-    //     console.log(jsonData);
-    //     if(jsonData.error){
-    //         setError(jsonData.error);
-    //     }
-    //     else{
-    //         window.location.href = '/';
-    //     }
-    // }
+   
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        // console.log('info2',email,userid,password);
-        // console.log('info type',typeof email,typeof userid,typeof password);
+     
         setError('')
         try {
             await createUser(userid, email, password,error);
@@ -50,10 +33,6 @@ const Signup = () => {
     }
     
 
-
-    //  const [userid, setUserid] = useState('')
-    // const [email, setEmail] = useState('')
-    // const [password, setPassword] = useState('')
 
 
   return (

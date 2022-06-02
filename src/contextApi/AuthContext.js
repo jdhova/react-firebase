@@ -1,9 +1,7 @@
 import { createContext, useContext } from "react";
 import{
    createUserWithEmailAndPassword,
-   signInWithEmailAndPassword,
-   signOut,
-   onAuthStateChanged,
+ 
 } from 'firebase/auth'
 import {auth} from '../firebase'
 
@@ -30,18 +28,3 @@ export const UserAuth = () => {
     }
 
 
-
-// export const UserAuth = () => {
-//     return(
-//         <UserContext.Consumer>
-//             {
-//                 (context) => {
-//                     return(
-//                         <div>
-//                             {context.user}
-//                         </div>
-//                     )
-//                 }
-//             }
-//         </UserContext.Consumer>
-//     )
