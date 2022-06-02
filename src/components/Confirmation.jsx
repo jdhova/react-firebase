@@ -3,7 +3,7 @@ import React from 'react'
 const Confirmation = () => {
   return (
    
-    <div><h3> you have successfully completed a post request via firebase....</h3>
+    <div className='main'><h2> You have successfully completed a post request via firebase....</h2>
     
     </div>
     

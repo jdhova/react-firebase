@@ -30,12 +30,11 @@ const Signup = () => {
             console.log('info types',typeof email,typeof userid,typeof password);
         }
     }
-    
-
-
+  
 
   return (
-<>
+<div className='main'>
+  <h2>Basic Post request page</h2>
     <form onSubmit ={onSubmit}>
         <div className="form-group">
       <label htmlFor="userId">User ID</label>
@@ -61,7 +60,7 @@ const Signup = () => {
     </form>
     
     
-  </>
+  </div>
   )
 }
 

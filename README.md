@@ -20,6 +20,10 @@ Create a responsive web app which consumes an API and lists the data. In additio
 
 ### Application version used
 
+### npm i to instal dep
+
+### npm start PORT: 3000, Node -v14.16.1
+
 ```
     "bootstrap": "^5.1.3",
     "firebase": "^9.8.2",
@@ -29,3 +33,5 @@ Create a responsive web app which consumes an API and lists the data. In additio
 ```
 
 ### Status : Complete, Minimum requirment achived.
+
+### Testing is still pending but I noticed Firebase Auth is very sensitive to characters placed in user fields, Application breaks when Router and unused components are removed.
