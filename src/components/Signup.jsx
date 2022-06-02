@@ -1,4 +1,3 @@
-
 import React,{useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../contextApi/AuthContext';
@@ -67,6 +66,3 @@ const Signup = () => {
 }
 
 export default Signup
-
-
-
